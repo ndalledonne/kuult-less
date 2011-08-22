@@ -1,0 +1,288 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Muli|Josefin+Sans:400,700|Open+Sans:400,700|Ubuntu:400,500,700);
+
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+/*
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+body {
+	font: 16px/24px Georgia, serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}*/
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+	background: #f5f5f5;
+	color: #444;
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+	font-family: Helvetica, Arial, sans-serif;
+	line-height: 24px;
+}
+
+a {
+	text-decoration: none;
+	color: #444;
+}
+
+a:hover {
+}
+
+#kuult {
+	width: 896px;
+	padding: 72px 48px 84px;
+	margin: 0 auto;
+}
+
+header {
+	padding-bottom: 23px;
+	margin-bottom: 24px;
+	border-bottom: 1px #d9d9d9 solid;
+	overflow: auto;
+}
+
+h1 {
+	float: left;
+}
+
+#nav {
+	float: left;
+	margin-top: 43px;
+	margin-left: 23px;
+}
+
+#nav li {
+	display: inline-block;
+	font-size: 10px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+#nav li.selected, #nav li:hover {
+	background: url(../i/navselected.png) no-repeat center 100%;
+}
+
+#content {
+}
+
+/**** Project Detail ****/
+
+#projectslider {
+	position: relative;
+}
+
+#projectinfo {
+	
+	width: 218px;
+	padding: 5px 17px;
+	margin-top: 15px;
+	backfground: url(../i/fond-slider-info.png) repeat;
+	color: #E4E4E4;
+	color: #333;
+	font-size: 10px;
+	line-height: 1.5;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#projectinfo h2 {
+	  font-size: 24px;
+	  font-family: "Ubuntu", sans-serif;
+	  font-weight: 700;
+}
+
+#slider {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	
+	width: 862px;
+	height: 408px;
+	overflow: hidden;
+	border: 1px solid #CCC;
+}
+
+#contenor {
+	position: absolute;
+	top: 0;
+}
+
+#slidernav {
+	position: absolute;
+	z-index: 2;
+	top: 396px;
+	right: 34px;
+	
+	padding: 4px 10px 0;
+	height: 20px;
+	background: #474747;
+	color: #E4E4E4;
+	font-size: 24px;
+	
+}
+
+#slidernav ul {
+	line-height: 0.6;
+}
+
+#slidernav li {
+	display: inline-block;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+#slidernav li:last-child {
+	margin-right: 0;
+}
+
+
+/*** Accueil ***/
+
+#content {
+	font-size: 10px;
+	line-height: 1.3;
+}
+
+#content h2 {
+	font-size: 12px;
+	margin-bottom: 13px;
+}
+
+#content p {
+	margin-bottom:  13px;
+}
+
+#content .blocinfo {
+	width: 436px;
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+		width: 712px;
+		padding: 48px 28px 60px;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+		width: 252px;
+		padding: 48px 34px 60px;
+	}
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+		width: 436px;
+		padding: 36px 22px 48px;
+	}
+	
+}
